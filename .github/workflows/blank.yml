@@ -24,5 +24,4 @@ jobs:
     - name: Update version
       uses: brettdorrans/write-version-to-file@master
       with:
-        filename: '/.VERSION'
-        placeholder: '${VERSION}'
+        filename: 'VERSION'
