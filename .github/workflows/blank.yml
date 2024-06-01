@@ -17,12 +17,11 @@ jobs:
       - uses: valitydev/action-autotag@v1
   write-version:
     runs-on: ubuntu-latest
-    permissions: write-all
-    name: Write Version to File
+    name: Write Tag to Version File
     steps:
     - uses: actions/checkout@master
     - name: Update version
-      uses: brettdorrans/write-version-to-file@master
+      uses: eball/write-tag-to-version-file@latest
       with:
         filename: './VERSION.h'
         placeholder: '${VERSION}'
