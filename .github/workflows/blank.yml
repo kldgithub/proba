@@ -16,4 +16,3 @@ jobs:
 
       - uses: valitydev/action-autotag@v1
 
-      - uses: vweevers/additional-tags-action@v1
