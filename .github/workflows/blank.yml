@@ -15,4 +15,14 @@ jobs:
           fetch-depth: 0
 
       - uses: valitydev/action-autotag@v1
-
+  write-version:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    name: Write Version to File
+    steps:
+    - uses: actions/checkout@master
+    - name: Update version
+      uses: brettdorrans/write-version-to-file@master
+      with:
+        filename: '/.VERSION.h'
+        placeholder: '${VERSION}'
