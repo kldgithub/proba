@@ -15,13 +15,3 @@ jobs:
           fetch-depth: 0
 
       - uses: valitydev/action-autotag@v1
-  write-version:
-    runs-on: ubuntu-latest
-    name: Write Tag to Version File
-    steps:
-    - uses: actions/checkout@master
-    - name: Update version
-      uses: eball/write-tag-to-version-file@latest
-      with:
-        filename: './VERSION.h'
-        placeholder: '${VERSION}'
